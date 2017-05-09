@@ -18,14 +18,10 @@ int main()
 	}
 	
 	//call to get values from an array
-	double average = 0;
-	for (int i = 0; i < numbers; i++)
-	{
-		average = dist[i].AverageDistance(dist[i]);
-		std::cout << std::endl;
-	}
-
-	std::cout << "Average value is: " << average << std::endl;
+	
+	dist[0].AverageDistance(dist, numbers);
+	
+	//std::cout << "Average value is: " << std::endl;
 
 	system("pause");
     return 0;

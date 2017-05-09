@@ -12,12 +12,20 @@ Distance::~Distance()
 {
 }
 
-double Distance::AverageDistance(Distance dist)
+void Distance::AverageDistance(Distance* dist, int number_)
 {
-	double average = dist.feet * 12 + dist.inches;
-	average += average;
+	Distance temp;
+	temp.inches = 0;
 
-	return average;
+	for (int i = 0; i < number_; i++)
+	{
+		temp.inches = dist[i].inches + (dist[i].feet * 12) + temp.inches;
+	}
+
+	std::cout << "Total: " << temp.inches << std::endl;
+	std::cout << "Divider: " << number_ << std::endl;
+	std::cout << "Average amount: " << temp.inches / number_ << std::endl;
+
 }
 void Distance::getDistance()
 {

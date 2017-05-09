@@ -7,7 +7,7 @@ class Distance
 public:
 	Distance();
 	~Distance();
-	double AverageDistance(Distance dist);
+	void AverageDistance(Distance* dist, int number_);
 	void Distance::getDistance();
 
 };
