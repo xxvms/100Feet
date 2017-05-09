@@ -10,21 +10,19 @@ int main()
 	int numbers = 0;
 	std::cin >> numbers;
 
-	//call to put value
-	std::cout << "Please provide number: ";
+	//call to provide values
 	
 	for (int i = 0; i < numbers; i++)
 	{
-		dist[i].addDistance();
+		dist[i].getDistance();
 	}
 	
-	//call to get value
+	//call to get values from an array
 	double average = 0;
 	for (int i = 0; i < numbers; i++)
 	{
 		average = dist[i].AverageDistance(dist[i]);
 		std::cout << std::endl;
-		//average += average;
 	}
 
 	std::cout << "Average value is: " << average << std::endl;

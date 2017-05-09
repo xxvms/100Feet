@@ -8,7 +8,7 @@ public:
 	Distance();
 	~Distance();
 	double AverageDistance(Distance dist);
-	void Distance::addDistance();
+	void Distance::getDistance();
 
 };
 

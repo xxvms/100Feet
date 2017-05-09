@@ -14,22 +14,12 @@ Distance::~Distance()
 
 double Distance::AverageDistance(Distance dist)
 {
-	int feetTemp = 0;
-	double average = 0;
-
-	while (dist.inches >= 12)
-	{
-		dist.inches = dist.inches - 12;
-		feetTemp++;
-	}
-
-	dist.feet = dist.feet + feetTemp;
-	
-	average = average + dist.feet + dist.inches;
+	double average = dist.feet * 12 + dist.inches;
+	average += average;
 
 	return average;
 }
-void Distance::addDistance()
+void Distance::getDistance()
 {
 	std::cout << "please provide feet: ";
 	std::cin >> feet;
